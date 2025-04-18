@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: url-shortener
-          image: gadesrivishnu21/url-shortener:latest
+          image: tejasreecj/url-shortener:latest
           env:
             - name: REDIS_HOST
               valueFrom:

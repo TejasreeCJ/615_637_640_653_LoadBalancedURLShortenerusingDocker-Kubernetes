@@ -4,9 +4,9 @@ metadata:
   name: url-shortener-service
 spec:
   selector:
-    app: url-shortener
+    app: url-shortener  # This should match the app label in your URL shortener pods
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 5000
-  type: NodePort  # Change to NodePort if using Minikube
+      port: 80           # This is the port exposed to the outside world
+      targetPort: 5000    # This is the internal port that your app is listening on
+  type: LoadBalancer     # This will create an external LoadBalancer
